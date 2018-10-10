@@ -69,21 +69,18 @@ nav div:hover {
   font-size: 2.5rem;
   transition: all 0.3s ease-out;
 }
-nav .home {
+nav div {
   transform: translateX(30vw);
+}
+nav .home {
   transition: transform 2000ms;
 }
 nav .about {
-  transform: translateX(30vw);
   transition: transform 2700ms;
 }
 nav .contact {
-  transform: translateX(30vw);
   transition: transform 3400ms;
 }
-nav.visible {
-  transform: translateX(0);
-}
-nav.visible div {
+nav.visible, nav.visible div {
   transform: translateX(0);
 }
