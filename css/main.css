@@ -23,6 +23,8 @@ div.burger {
   height: 50px;
 
   z-index: 1;
+
+  cursor: pointer;
 }
 div.burger span {
   position: relative;
