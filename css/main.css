@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+div.burger {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 60px;
+  height: 50px;
+
+  z-index: 1;
+}
+div.burger span {
+  position: relative;
+  transition: all .5s;
+  display: block;
+
+  width: 100%;
+  height: 8px;
+  background: #2E4347;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+div.active span:nth-child(1) {
+  top: 21px;
+  transform: rotate(45deg);
+}
+div.active span:nth-child(2) {
+  transform: scale(0);
+}
+div.active span:nth-child(3) {
+  bottom: 21px;
+  transform: rotate(135deg);
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 30vw;
+  height: 100vh;
+  background: #C0D1C2;
+  font-size: 2.3rem;
+  font-family: 'Abril Fatface', sans-serif;
+  letter-spacing: 3px;
+
+  /* Décale la nav de 30vw */
+  transform: translateX(30vw);
+  transition: transform 700ms;
+}
+nav div:hover {
+  font-size: 2.5rem;
+  transition: all 0.3s ease-out;
+}
+nav .home {
+  transform: translateX(30vw);
+  transition: transform 2000ms;
+}
+nav .about {
+  transform: translateX(30vw);
+  transition: transform 2700ms;
+}
+nav .contact {
+  transform: translateX(30vw);
+  transition: transform 3400ms;
+}
+nav.visible {
+  transform: translateX(0);
+}
+nav.visible div {
+  transform: translateX(0);
+}
